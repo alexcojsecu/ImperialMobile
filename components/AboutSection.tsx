@@ -35,15 +35,14 @@ const AboutSection = () => {
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* Heading */}
           <h2 className="text-6xl font-bold text-gray-900 mb-10">
-            Imperial Mobile'History
-          </h2>
+  Imperial Mobile&rsquo;History
+</h2>
 
-          {/* Subheading */}
-          <p className="text-3xl font-medium text-gray-700 mb-10">
-            Los Angeles' Premier Mobile Auto Detailing Service
-          </p>
+<p className="text-3xl font-medium text-gray-700 mb-10">
+  Los Angeles&rsquo; Premier Mobile Auto Detailing Service
+</p>
+
 
           {/* Main content */}
           <p className="text-2xl text-gray-600 leading-relaxed mb-10">

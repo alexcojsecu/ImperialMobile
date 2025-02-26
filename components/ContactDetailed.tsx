@@ -16,8 +16,14 @@ const ContactDetailed = () => {
     serviceType: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [selectedCar, setSelectedCar] = useState("");
+  // Remove this line
+// const [isSubmitting, setIsSubmitting] = useState(false);
+const [isSubmitting] = useState(false); 
+
+// Remove this line
+// const [selectedCar, setSelectedCar] = useState("");
+const [selectedCar] = useState(""); 
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false);
 
@@ -34,7 +40,8 @@ const ContactDetailed = () => {
   // Calculate total price and generate itemized breakdown
   const calculatePrice = () => {
     let totalPrice = 0;
-    let breakdown: { carType: string; quantity: number; price: number }[] = [];
+    const breakdown: { carType: string; quantity: number; price: number }[] = [];
+
 
     Object.entries(formData.cars).forEach(([carType, quantity]) => {
         if (formData.serviceType && pricing[carType as keyof typeof pricing]) {

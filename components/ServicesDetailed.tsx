@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useRouter } from "next/navigation";
 
 const services = [
   {
@@ -65,7 +64,6 @@ const services = [
 
 const ServicesDetailed = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const router = useRouter();
 
   return (
     <section

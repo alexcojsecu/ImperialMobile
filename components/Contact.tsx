@@ -46,9 +46,10 @@ const Contact = () => {
       } else {
         throw new Error("Failed to send message.");
       }
-    } catch (err) {
+    } catch {
       setError("Something went wrong. Please try again later.");
-    } finally {
+    }
+     finally {
       setIsSubmitting(false);
     }
   };
