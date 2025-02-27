@@ -2,16 +2,23 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FaChevronDown, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+// BunnyCDN base URL
+const BUNNY_CDN_BASE_URL = "https://ImperialMobileGallery.b-cdn.net";
+
+// Generate image URLs for BunnyCDN
 const generateImageArray = (prefix: string, count: number) => {
-  return Array.from({ length: count }, (_, i) => `/${prefix}${i + 1}.jpg`);
+  return Array.from({ length: count }, (_, i) => `${BUNNY_CDN_BASE_URL}/${prefix}${i + 1}.jpg`);
 };
 
+// Generate image arrays for each category
 const suvImages = generateImageArray("Suv", 19);
 const sedanImages = generateImageArray("Sedan", 42);
 const interiorImages = generateImageArray("Interior", 16);
 
+// Combine all images into a single array
 const allImages = [...suvImages, ...sedanImages, ...interiorImages];
 const IMAGES_PER_PAGE = 15;
 
@@ -109,10 +116,16 @@ const Gallery: React.FC<GalleryProps> = ({ selectedCategory = "All" }) => {
             className="relative overflow-hidden rounded-2xl shadow-md cursor-pointer"
             onClick={() => handleImageClick(src, index)}
           >
-            <img
+            <Image
               src={src}
               alt={`Gallery image ${index + 1}`}
+              width={500} // Set appropriate width
+              height={300} // Set appropriate height
               className="w-full h-full object-cover transition-transform duration-300"
+              quality={75} // Optimize for faster loading
+              loading="lazy" // Lazy load non-critical images
+              placeholder="blur" // Add blurry placeholder
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgAB/1h8JAAAAABJRU5ErkJggg==" // Placeholder image
             />
           </motion.div>
         ))}
@@ -157,10 +170,13 @@ const Gallery: React.FC<GalleryProps> = ({ selectedCategory = "All" }) => {
             className="relative w-[80vw] h-[80vh] flex items-center justify-center"
             onClick={(e) => e.stopPropagation()} // Prevent overlay close when clicking the image
           >
-            <img
+            <Image
               src={selectedImage}
               alt="Enlarged gallery image"
-              className="max-w-full max-h-full object-contain rounded-lg transform scale-150" // Scale the image 2.5x
+              width={1200} // Set appropriate width
+              height={800} // Set appropriate height
+              className="max-w-full max-h-full object-contain rounded-lg"
+              quality={75} // Optimize for faster loading
             />
           </div>
 

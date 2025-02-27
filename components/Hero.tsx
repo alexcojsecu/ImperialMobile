@@ -6,18 +6,27 @@ import NumberTicker from './ui/NumberTicker';
 import { SparklesText } from './magicui/sparkles-text'; // Import the SparklesText component
 
 const Hero = () => {
+  // BunnyCDN base URL
+  const BUNNY_CDN_BASE_URL = "https://ImperialMobileGallery.b-cdn.net";
+
+  // Background image URL
+  const heroImage = `${BUNNY_CDN_BASE_URL}/HeroPageFR.jpg`;
+
   return (
     <section className="relative h-screen w-full">
+      {/* Preload the background image */}
+      <link rel="preload" href={heroImage} as="image" />
+
       {/* Background Image with reduced opacity */}
       <div className="absolute inset-0 bg-black">
         <Image
-          src="/HeroPageFR.jpg"
+          src={heroImage}
           alt="Hero Background"
           fill
-          priority
+          priority // Preload and prioritize this image
           className="object-cover opacity-80 transition-opacity duration-500"
           sizes="100vw"
-          quality={100}
+          quality={75} // Reduce quality for faster loading
         />
       </div>
 

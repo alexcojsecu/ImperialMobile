@@ -19,6 +19,9 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
+  
+
   return (
     <nav className="absolute top-0 left-0 right-0 z-30">
       <div className="max-container padding-container">
@@ -28,9 +31,9 @@ const Navbar = () => {
             <Image
               src="/LogoImage.png"
               alt="Logo"
-              width={300} // Logo size increased to 300
-              height={300}
-              className="object-contain"
+              width={400} // Initial width (will be overridden by CSS)
+              height={100} // Initial height (will be overridden by CSS)
+              className="object-contain w-[clamp(150px,25vw,400px)] transition-all duration-300"
             />
           </Link>
 
@@ -81,7 +84,7 @@ const Navbar = () => {
                 className={`text-5xl ${navTextColorClass} cursor-pointer pb-1.5 transition-all duration-300 hover:text-primary hover:translate-x-2 font-sans`}
                 onClick={toggleMenu}
               >
-          
+                {/* Optional: Add additional links here */}
               </Link>
             </ul>
           </div>

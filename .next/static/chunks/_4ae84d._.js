@@ -84,7 +84,7 @@ const Contact = ()=>{
             } else {
                 throw new Error("Failed to send message.");
             }
-        } catch (err) {
+        } catch  {
             setError("Something went wrong. Please try again later.");
         } finally{
             setIsSubmitting(false);
@@ -135,23 +135,23 @@ const Contact = ()=>{
                                     className: "absolute bottom-[-14px] left-1/4 w-1/2 h-[3px] bg-gray-900 origin-left"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Contact.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 76,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Contact.tsx",
-                            lineNumber: 66,
+                            lineNumber: 67,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Contact.tsx",
-                        lineNumber: 65,
+                        lineNumber: 66,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Contact.tsx",
-                    lineNumber: 64,
+                    lineNumber: 65,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -169,12 +169,12 @@ const Contact = ()=>{
                                 className: "w-full bg-gray-100 border-none rounded-lg text-lg py-3 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-800"
                             }, void 0, false, {
                                 fileName: "[project]/components/Contact.tsx",
-                                lineNumber: 88,
+                                lineNumber: 89,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Contact.tsx",
-                            lineNumber: 87,
+                            lineNumber: 88,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -188,12 +188,12 @@ const Contact = ()=>{
                                 className: "w-full bg-gray-100 border-none rounded-lg text-lg py-3 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-800"
                             }, void 0, false, {
                                 fileName: "[project]/components/Contact.tsx",
-                                lineNumber: 101,
+                                lineNumber: 102,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Contact.tsx",
-                            lineNumber: 100,
+                            lineNumber: 101,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -206,12 +206,12 @@ const Contact = ()=>{
                                 className: "w-full bg-gray-100 border-none rounded-lg text-lg py-3 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-800 resize-none h-32"
                             }, void 0, false, {
                                 fileName: "[project]/components/Contact.tsx",
-                                lineNumber: 114,
+                                lineNumber: 115,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Contact.tsx",
-                            lineNumber: 113,
+                            lineNumber: 114,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -221,13 +221,13 @@ const Contact = ()=>{
                             children: isSubmitting ? "Sending..." : "Send Message"
                         }, void 0, false, {
                             fileName: "[project]/components/Contact.tsx",
-                            lineNumber: 125,
+                            lineNumber: 126,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Contact.tsx",
-                    lineNumber: 85,
+                    lineNumber: 86,
                     columnNumber: 9
                 }, this),
                 success && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -235,7 +235,7 @@ const Contact = ()=>{
                     children: "Message sent successfully!"
                 }, void 0, false, {
                     fileName: "[project]/components/Contact.tsx",
-                    lineNumber: 136,
+                    lineNumber: 137,
                     columnNumber: 11
                 }, this),
                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -243,18 +243,18 @@ const Contact = ()=>{
                     children: error
                 }, void 0, false, {
                     fileName: "[project]/components/Contact.tsx",
-                    lineNumber: 141,
+                    lineNumber: 142,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/Contact.tsx",
-            lineNumber: 58,
+            lineNumber: 59,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/Contact.tsx",
-        lineNumber: 57,
+        lineNumber: 58,
         columnNumber: 5
     }, this);
 };
@@ -281,6 +281,7 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-icons/fa/index.mjs [app-client] (ecmascript)");
 ;
@@ -289,14 +290,20 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
+;
+// BunnyCDN base URL
+const BUNNY_CDN_BASE_URL = "https://ImperialMobileGallery.b-cdn.net";
+// Generate image URLs for BunnyCDN
 const generateImageArray = (prefix, count)=>{
     return Array.from({
         length: count
-    }, (_, i)=>`/${prefix}${i + 1}.jpg`);
+    }, (_, i)=>`${BUNNY_CDN_BASE_URL}/${prefix}${i + 1}.jpg`);
 };
+// Generate image arrays for each category
 const suvImages = generateImageArray("Suv", 19);
 const sedanImages = generateImageArray("Sedan", 42);
 const interiorImages = generateImageArray("Interior", 16);
+// Combine all images into a single array
 const allImages = [
     ...suvImages,
     ...sedanImages,
@@ -363,7 +370,7 @@ const Gallery = ({ selectedCategory = "All" })=>{
                         children: "Gallery"
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 74,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -377,20 +384,20 @@ const Gallery = ({ selectedCategory = "All" })=>{
                                         children: filter
                                     }, void 0, false, {
                                         fileName: "[project]/components/Gallery.tsx",
-                                        lineNumber: 80,
+                                        lineNumber: 87,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronDown"], {
                                         className: `transition-transform ${dropdownOpen ? "rotate-180" : ""}`
                                     }, void 0, false, {
                                         fileName: "[project]/components/Gallery.tsx",
-                                        lineNumber: 81,
+                                        lineNumber: 88,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Gallery.tsx",
-                                lineNumber: 76,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, this),
                             dropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -410,24 +417,24 @@ const Gallery = ({ selectedCategory = "All" })=>{
                                         children: option
                                     }, option, false, {
                                         fileName: "[project]/components/Gallery.tsx",
-                                        lineNumber: 86,
+                                        lineNumber: 93,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/Gallery.tsx",
-                                lineNumber: 84,
+                                lineNumber: 91,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 75,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 73,
+                lineNumber: 80,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -445,23 +452,31 @@ const Gallery = ({ selectedCategory = "All" })=>{
                         },
                         className: "relative overflow-hidden rounded-2xl shadow-md cursor-pointer",
                         onClick: ()=>handleImageClick(src, index),
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             src: src,
                             alt: `Gallery image ${index + 1}`,
-                            className: "w-full h-full object-cover transition-transform duration-300"
+                            width: 500,
+                            height: 300,
+                            className: "w-full h-full object-cover transition-transform duration-300",
+                            quality: 75,
+                            loading: "lazy" // Lazy load non-critical images
+                            ,
+                            placeholder: "blur" // Add blurry placeholder
+                            ,
+                            blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgAB/1h8JAAAAABJRU5ErkJggg==" // Placeholder image
                         }, void 0, false, {
                             fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 112,
+                            lineNumber: 119,
                             columnNumber: 13
                         }, this)
                     }, index, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 104,
+                        lineNumber: 111,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 102,
+                lineNumber: 109,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -474,7 +489,7 @@ const Gallery = ({ selectedCategory = "All" })=>{
                         children: "Previous"
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 121,
+                        lineNumber: 134,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -487,7 +502,7 @@ const Gallery = ({ selectedCategory = "All" })=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 128,
+                        lineNumber: 141,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -497,13 +512,13 @@ const Gallery = ({ selectedCategory = "All" })=>{
                         children: "Next"
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 129,
+                        lineNumber: 142,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 120,
+                lineNumber: 133,
                 columnNumber: 7
             }, this),
             selectedImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -520,29 +535,32 @@ const Gallery = ({ selectedCategory = "All" })=>{
                             className: "text-3xl text-gray-900"
                         }, void 0, false, {
                             fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 152,
+                            lineNumber: 165,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 145,
+                        lineNumber: 158,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative w-[80vw] h-[80vh] flex items-center justify-center",
                         onClick: (e)=>e.stopPropagation(),
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             src: selectedImage,
                             alt: "Enlarged gallery image",
-                            className: "max-w-full max-h-full object-contain rounded-lg transform scale-150" // Scale the image 2.5x
+                            width: 1200,
+                            height: 800,
+                            className: "max-w-full max-h-full object-contain rounded-lg",
+                            quality: 75
                         }, void 0, false, {
                             fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 160,
+                            lineNumber: 173,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 156,
+                        lineNumber: 169,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -555,12 +573,12 @@ const Gallery = ({ selectedCategory = "All" })=>{
                             className: "text-3xl text-gray-900"
                         }, void 0, false, {
                             fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 175,
+                            lineNumber: 191,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 168,
+                        lineNumber: 184,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -574,24 +592,24 @@ const Gallery = ({ selectedCategory = "All" })=>{
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 186,
+                            lineNumber: 202,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 179,
+                        lineNumber: 195,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 140,
+                lineNumber: 153,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Gallery.tsx",
-        lineNumber: 66,
+        lineNumber: 73,
         columnNumber: 5
     }, this);
 };
@@ -815,13 +833,42 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$magicui$2f$spa
 ;
 ;
 const Hero2 = ()=>{
+    // BunnyCDN base URL
+    const BUNNY_CDN_BASE_URL = "https://ImperialMobileGallery.b-cdn.net";
     // Specify the exact images you want for each category
-    const sedanImage = "/Sedan5.jpg";
-    const interiorImage = "/Interior8.jpg";
-    const suvImage = "/Suv12.jpg";
+    const sedanImage = `${BUNNY_CDN_BASE_URL}/Sedan5.jpg`;
+    const interiorImage = `${BUNNY_CDN_BASE_URL}/Interior8.jpg`;
+    const suvImage = `${BUNNY_CDN_BASE_URL}/Suv12.jpg`;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "relative h-screen w-full flex flex-col md:flex-row overflow-hidden",
         children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
+                rel: "preload",
+                href: sedanImage,
+                as: "image"
+            }, void 0, false, {
+                fileName: "[project]/components/Hero2.tsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
+                rel: "preload",
+                href: interiorImage,
+                as: "image"
+            }, void 0, false, {
+                fileName: "[project]/components/Hero2.tsx",
+                lineNumber: 20,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
+                rel: "preload",
+                href: suvImage,
+                as: "image"
+            }, void 0, false, {
+                fileName: "[project]/components/Hero2.tsx",
+                lineNumber: 21,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "w-full md:w-1/3 h-1/3 md:h-full relative group overflow-hidden transition-transform duration-500 hover:scale-110 hover:z-10",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -832,24 +879,21 @@ const Hero2 = ()=>{
                         fill: true,
                         priority: true,
                         className: "object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100",
-                        sizes: "100vw md:33vw",
-                        quality: 100,
-                        style: {
-                            maxHeight: "100%"
-                        }
+                        sizes: "(max-width: 768px) 100vw, 33vw",
+                        quality: 75
                     }, void 0, false, {
                         fileName: "[project]/components/Hero2.tsx",
-                        lineNumber: 18,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Hero2.tsx",
-                    lineNumber: 17,
+                    lineNumber: 25,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Hero2.tsx",
-                lineNumber: 16,
+                lineNumber: 24,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -862,24 +906,21 @@ const Hero2 = ()=>{
                         fill: true,
                         priority: true,
                         className: "object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100",
-                        sizes: "100vw md:33vw",
-                        quality: 100,
-                        style: {
-                            maxHeight: "100%"
-                        }
+                        sizes: "(max-width: 768px) 100vw, 33vw",
+                        quality: 75
                     }, void 0, false, {
                         fileName: "[project]/components/Hero2.tsx",
-                        lineNumber: 33,
+                        lineNumber: 40,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Hero2.tsx",
-                    lineNumber: 32,
+                    lineNumber: 39,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Hero2.tsx",
-                lineNumber: 31,
+                lineNumber: 38,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -892,31 +933,28 @@ const Hero2 = ()=>{
                         fill: true,
                         priority: true,
                         className: "object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100",
-                        sizes: "100vw md:33vw",
-                        quality: 100,
-                        style: {
-                            maxHeight: "100%"
-                        }
+                        sizes: "(max-width: 768px) 100vw, 33vw",
+                        quality: 75
                     }, void 0, false, {
                         fileName: "[project]/components/Hero2.tsx",
-                        lineNumber: 48,
+                        lineNumber: 54,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Hero2.tsx",
-                    lineNumber: 47,
+                    lineNumber: 53,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Hero2.tsx",
-                lineNumber: 46,
+                lineNumber: 52,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none"
             }, void 0, false, {
                 fileName: "[project]/components/Hero2.tsx",
-                lineNumber: 62,
+                lineNumber: 67,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -926,18 +964,18 @@ const Hero2 = ()=>{
                     className: "text-white text-9xl font-bold font-sans [text-shadow:_0_0_10px_black,_0_0_20px_black] drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]"
                 }, void 0, false, {
                     fileName: "[project]/components/Hero2.tsx",
-                    lineNumber: 66,
+                    lineNumber: 71,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Hero2.tsx",
-                lineNumber: 65,
+                lineNumber: 70,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Hero2.tsx",
-        lineNumber: 14,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 };

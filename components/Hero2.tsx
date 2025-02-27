@@ -5,13 +5,21 @@ import Image from "next/image";
 import { SparklesText } from './magicui/sparkles-text'; // Import the SparklesText component
 
 const Hero2 = () => {
+  // BunnyCDN base URL
+  const BUNNY_CDN_BASE_URL = "https://ImperialMobileGallery.b-cdn.net";
+
   // Specify the exact images you want for each category
-  const sedanImage = "/Sedan5.jpg"; 
-  const interiorImage = "/Interior8.jpg"; 
-  const suvImage = "/Suv12.jpg"; 
+  const sedanImage = `${BUNNY_CDN_BASE_URL}/Sedan5.jpg`; 
+  const interiorImage = `${BUNNY_CDN_BASE_URL}/Interior8.jpg`; 
+  const suvImage = `${BUNNY_CDN_BASE_URL}/Suv12.jpg`; 
 
   return (
     <section className="relative h-screen w-full flex flex-col md:flex-row overflow-hidden">
+      {/* Preload critical images */}
+      <link rel="preload" href={sedanImage} as="image" />
+      <link rel="preload" href={interiorImage} as="image" />
+      <link rel="preload" href={suvImage} as="image" />
+
       {/* Three-column background images with hover enlarge & overlap effect */}
       <div className="w-full md:w-1/3 h-1/3 md:h-full relative group overflow-hidden transition-transform duration-500 hover:scale-110 hover:z-10">
         <div className="absolute inset-0 bg-black">
@@ -19,11 +27,10 @@ const Hero2 = () => {
             src={sedanImage}
             alt="Sedan"
             fill
-            priority // Sedan image is prioritized
+            priority // Preload and prioritize this image
             className="object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100"
-            sizes="100vw md:33vw"
-            quality={100}
-            style={{ maxHeight: "100%" }}
+            sizes="(max-width: 768px) 100vw, 33vw"
+            quality={75} // Optimize for faster loading
           />
         </div>
       </div>
@@ -34,11 +41,10 @@ const Hero2 = () => {
             src={interiorImage}
             alt="Interior"
             fill
-            priority // Interior image is prioritized
+            priority // Preload and prioritize this image
             className="object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100"
-            sizes="100vw md:33vw"
-            quality={100}
-            style={{ maxHeight: "100%" }}
+            sizes="(max-width: 768px) 100vw, 33vw"
+            quality={75} // Optimize for faster loading
           />
         </div>
       </div>
@@ -49,11 +55,10 @@ const Hero2 = () => {
             src={suvImage}
             alt="SUV"
             fill
-            priority // SUV image is prioritized
+            priority // Preload and prioritize this image
             className="object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100"
-            sizes="100vw md:33vw"
-            quality={100}
-            style={{ maxHeight: "100%" }}
+            sizes="(max-width: 768px) 100vw, 33vw"
+            quality={75} // Optimize for faster loading
           />
         </div>
       </div>
