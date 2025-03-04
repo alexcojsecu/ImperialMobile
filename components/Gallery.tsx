@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { FaChevronDown, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Image from "next/image"; // Import the Image component from next/image
 
 const CDN_BASE_URL = "https://ImperialMobileGallery.b-cdn.net";
 
@@ -25,10 +26,10 @@ const imageNames = [
 const INITIAL_IMAGES_COUNT = 15;
 
 interface GalleryProps {
-  selectedCategory?: string;
+  // Removed the unused selectedCategory prop
 }
 
-const Gallery: React.FC<GalleryProps> = ({ selectedCategory = "All" }) => {
+const Gallery: React.FC<GalleryProps> = () => {
   const [visibleImages, setVisibleImages] = useState<number>(INITIAL_IMAGES_COUNT);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
@@ -61,11 +62,6 @@ const Gallery: React.FC<GalleryProps> = ({ selectedCategory = "All" }) => {
 
   const handleCloseOverlay = () => {
     setSelectedImage(null);
-  };
-
-  const handleSortChange = (value: string) => {
-    setSortOrder(value);
-    setShowDropdown(false);
   };
 
   const handleCategoryChange = (value: string) => {
@@ -123,10 +119,12 @@ const Gallery: React.FC<GalleryProps> = ({ selectedCategory = "All" }) => {
             className="relative overflow-hidden rounded-2xl shadow-md cursor-pointer"
             onClick={() => handleImageClick(src, index)}
           >
-            <img
+            <Image
               src={src}
               alt={`Gallery image ${index + 1}`}
               loading="lazy"
+              width={300} // Set appropriate width
+              height={200} // Set appropriate height
               className="w-full h-full object-cover transition-transform duration-300"
             />
           </motion.div>
@@ -153,7 +151,13 @@ const Gallery: React.FC<GalleryProps> = ({ selectedCategory = "All" }) => {
           <button onClick={handleNextImage} className="absolute right-4 text-white text-3xl">
             <FaChevronRight />
           </button>
-          <img src={selectedImage} alt="Enlarged gallery image" className="max-w-full max-h-full object-contain" />
+          <Image
+            src={selectedImage}
+            alt="Enlarged gallery image"
+            width={800} // Set appropriate width
+            height={600} // Set appropriate height
+            className="max-w-full max-h-full object-contain"
+          />
         </div>
       )}
     </motion.div>
