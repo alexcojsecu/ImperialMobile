@@ -3,17 +3,27 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Highlight } from "@/components/ui/hero-highlight";
 
 const About = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const textSections = [
-    "My name is Alexandru Cojescu, the creator behind Imperial Mobile Detailing's mobile detailing business. I'm currently 17 years old and attend Palisades Charter High School.",
-    "My appreciation for all unique and nice-looking vehicles, both classic and modern, led me to start this business back when I was 14. At the time, I was eager to make my own money but realized no one would hire me at that age. That's when I got the idea to launch my own mobile detailing venture - nothing would stop me from turning my creative vision into reality since I'd be working for myself!",
-    "With encouragement from my friends and family, I began offering mobile detailing services, quickly realizing there was high demand to keep cars looking sharp. What began as a summer job washing neighbor's cars has steadily grown into a continuous mobile business operation.",
-    "Now a Senior in high school, I balance my classes and activities with managing this student-run enterprise. I take great pride in the quality of service I provide clients throughout the area. My goal is to deliver convenience, reliability, and affordability to busy vehicle owners.",
-    "Contact me today to learn more about my customized detailing packages and car care products. I look forward to serving you through my youth entrepreneurship!",
-    "*7:00AM - 3:00PM, I may be in a lecture and not be able to respond to calls. Shoot me a text and I'll be sure to get back to you as soon as possible! (424-378-9749)"
+    <p key={0}>
+      Imperial Mobile Detailing is owned and operated by <Highlight>Alexandru Cojescu</Highlight>, the dedicated owner of this premium mobile detailing service. As a dedicated entrepreneur and senior at Palisades Charter High School, I have built this business <Highlight>from the ground up</Highlight>, fueled by my passion for automotive aesthetics.
+    </p>,
+    <p key={1}>
+      My appreciation for both classic and modern vehicles inspired me to launch this venture at the age of 14. At the time, I was eager to earn my own income but quickly realized that traditional job opportunities were limited for someone my age. Determined to turn my vision into reality, I established my own mobile detailing service - one that prioritizes <Highlight>quality, convenience, and customer satisfaction</Highlight>.
+    </p>,
+    <p key={2}>
+      With the support of friends and family, what started as a small summer job washing cars for neighbors has grown into a <Highlight>thriving business serving a loyal clientele</Highlight>. I take immense pride in delivering meticulous detailing services that help vehicle owners maintain their cars’ pristine appearance.
+    </p>,
+    <p key={3}>
+      As a <Highlight>student entrepreneur</Highlight>, I balance my academic responsibilities with running this business, ensuring that every customer receives top-tier service. My commitment is to provide <Highlight>convenience, reliability, and affordability</Highlight> to busy vehicle owners who value high-quality car care.
+    </p>,
+    <p key={4}>
+      Get in touch today to explore my customized detailing packages and premium car care products. I look forward to exceeding your expectations!
+    </p>
   ];
 
   return (
@@ -34,7 +44,7 @@ const About = () => {
 
           <div className="max-w-4xl text-2xl text-center space-y-8">
             {textSections.map((text, index) => (
-              <motion.p
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -42,7 +52,7 @@ const About = () => {
                 className="leading-relaxed reveal-text"
               >
                 {text}
-              </motion.p>
+              </motion.div>
             ))}
           </div>
         </>

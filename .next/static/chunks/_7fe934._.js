@@ -718,131 +718,121 @@ const ServicesDetailed = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/ServicesDetailed.tsx",
-                                lineNumber: 89,
+                                lineNumber: 91,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ServicesDetailed.tsx",
-                        lineNumber: 81,
+                        lineNumber: 83,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/ServicesDetailed.tsx",
-                    lineNumber: 80,
+                    lineNumber: 82,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "bg-white pt-20 pb-20 px-14 rounded-2xl shadow-2xl shadow-gray-900 border border-gray-800 flex flex-col items-center",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "grid md:grid-cols-3 w-full gap-8 text-center",
-                            children: services.map((service, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    initial: {
-                                        opacity: 0,
-                                        y: 50
-                                    },
-                                    animate: {
-                                        opacity: 1,
-                                        y: 0
-                                    },
-                                    transition: {
-                                        delay: index * 0.2,
-                                        duration: 1,
-                                        ease: "easeOut"
-                                    },
-                                    className: "p-8 border-r last:border-r-0 flex flex-col items-center",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-5xl font-semibold mb-4 text-gray-900",
-                                            children: service.title
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/ServicesDetailed.tsx",
-                                            lineNumber: 120,
-                                            columnNumber: 19
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-3xl text-gray-800 mb-4",
-                                            children: service.description
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/ServicesDetailed.tsx",
-                                            lineNumber: 123,
-                                            columnNumber: 19
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                            className: "pt-4 text-2xl text-gray-800 font-medium list-disc pl-6 text-left w-full",
-                                            children: service.details.map((detail, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    className: "mb-2",
-                                                    children: detail
-                                                }, i, false, {
-                                                    fileName: "[project]/components/ServicesDetailed.tsx",
-                                                    lineNumber: 128,
-                                                    columnNumber: 23
-                                                }, this))
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/ServicesDetailed.tsx",
-                                            lineNumber: 126,
-                                            columnNumber: 19
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex-grow"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/ServicesDetailed.tsx",
-                                            lineNumber: 134,
-                                            columnNumber: 19
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "pt-12 w-full",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-3xl text-gray-900",
-                                                children: [
-                                                    "Price: ",
-                                                    service.price
-                                                ]
-                                            }, void 0, true, {
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid md:grid-cols-3 w-full gap-8 text-center",
+                        children: services.map((service, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                initial: {
+                                    opacity: 0,
+                                    y: 50
+                                },
+                                animate: {
+                                    opacity: 1,
+                                    y: 0
+                                },
+                                transition: {
+                                    delay: index * 0.2,
+                                    duration: 1,
+                                    ease: "easeOut"
+                                },
+                                className: "p-8 border-r last:border-r-0 flex flex-col items-center",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "text-5xl font-semibold mb-4 text-gray-900",
+                                        children: service.title
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ServicesDetailed.tsx",
+                                        lineNumber: 122,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-3xl text-gray-800 mb-4",
+                                        children: service.description
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ServicesDetailed.tsx",
+                                        lineNumber: 125,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                        className: "pt-4 text-2xl text-gray-800 font-medium list-disc pl-6 text-left w-full",
+                                        children: service.details.map((detail, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                className: "mb-2",
+                                                children: detail
+                                            }, i, false, {
                                                 fileName: "[project]/components/ServicesDetailed.tsx",
-                                                lineNumber: 137,
-                                                columnNumber: 21
-                                            }, this)
-                                        }, void 0, false, {
+                                                lineNumber: 130,
+                                                columnNumber: 23
+                                            }, this))
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ServicesDetailed.tsx",
+                                        lineNumber: 128,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex-grow"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ServicesDetailed.tsx",
+                                        lineNumber: 136,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "pt-12 w-full",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-3xl text-gray-900",
+                                            children: [
+                                                "Price: ",
+                                                service.price
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/components/ServicesDetailed.tsx",
-                                            lineNumber: 136,
-                                            columnNumber: 19
+                                            lineNumber: 139,
+                                            columnNumber: 21
                                         }, this)
-                                    ]
-                                }, index, true, {
-                                    fileName: "[project]/components/ServicesDetailed.tsx",
-                                    lineNumber: 109,
-                                    columnNumber: 17
-                                }, this))
-                        }, void 0, false, {
-                            fileName: "[project]/components/ServicesDetailed.tsx",
-                            lineNumber: 107,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "mt-8 text-2xl text-gray-800 text-center",
-                            children: "Additional Services"
-                        }, void 0, false, {
-                            fileName: "[project]/components/ServicesDetailed.tsx",
-                            lineNumber: 145,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ServicesDetailed.tsx",
+                                        lineNumber: 138,
+                                        columnNumber: 19
+                                    }, this)
+                                ]
+                            }, index, true, {
+                                fileName: "[project]/components/ServicesDetailed.tsx",
+                                lineNumber: 111,
+                                columnNumber: 17
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/components/ServicesDetailed.tsx",
+                        lineNumber: 109,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
                     fileName: "[project]/components/ServicesDetailed.tsx",
-                    lineNumber: 106,
+                    lineNumber: 108,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/ServicesDetailed.tsx",
-            lineNumber: 74,
+            lineNumber: 76,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/ServicesDetailed.tsx",
-        lineNumber: 69,
+        lineNumber: 71,
         columnNumber: 5
     }, this);
 };

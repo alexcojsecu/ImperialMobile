@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { PulsatingButton } from "./magicui/pulsating-button";
+import { useRouter } from "next/navigation"; // Import useRouter for navigation
 
 const services = [
   {
@@ -64,6 +66,7 @@ const services = [
 
 const ServicesDetailed = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const router = useRouter(); // Initialize useRouter
 
   return (
     <section
@@ -141,10 +144,13 @@ const ServicesDetailed = () => {
                 </motion.div>
               ))}
             </div>
-            {/* Single centered text below all service cards */}
-            <p className="mt-8 text-2xl text-gray-800 text-center">
-              Additional Services
-            </p>
+
+            {/* Pulsating Button */}
+            <div className="flex justify-center mt-12">
+              <PulsatingButton onClick={() => router.push("/contactpage")}>
+                Get a Quote Now
+              </PulsatingButton>
+            </div>
           </div>
         </motion.div>
       )}

@@ -36,28 +36,24 @@ const AboutSection = () => {
           }`}
         >
           <h2 className="text-6xl font-bold text-gray-900 mb-10">
-  Imperial Mobile&rsquo;History
-</h2>
+            Imperial Mobile&rsquo;History
+          </h2>
 
-<p className="text-3xl font-medium text-gray-700 mb-10">
-  Los Angeles&rsquo; Premier Mobile Auto Detailing Service
-</p>
-
+          <p className="text-3xl font-medium text-gray-700 mb-10">
+            Los Angeles&rsquo; Premier Mobile Auto Detailing Service
+          </p>
 
           {/* Main content */}
           <p className="text-2xl text-gray-600 leading-relaxed mb-10">
-            At Auto Detail Los Angeles, we bring the professional detailing
-            studio to your doorstep. Our team of experienced detailers is
-            committed to providing <Highlight>exceptional service</Highlight>{" "}
-            and outstanding results. We use only the finest products and latest
-            techniques to ensure your vehicle receives the care it deserves.
-            From <Highlight>basic maintenance</Highlight> to complete paint
-            correction and <Highlight>ceramic coating</Highlight>, we offer
-            comprehensive solutions tailored to your needs.
+          Owned and operated by Alexandru Cojescu, Imperial Mobile Detailing is a premium mobile car care service that has been delivering <Highlight>exceptional results since 2021</Highlight>. Specializing in meticulous exterior and interior detailing, we bring convenience and professionalism <Highlight>directly to your doorstep</Highlight>.
+
+Our commitment to quality, reliability, and customer satisfaction ensures that every vehicle receives the care it deserves. Whether you’re looking to restore your car’s shine or maintain its pristine condition, our customized detailing packages are designed to meet your needs.
+
+Get in touch today to experience the difference of a service that prioritizes your vehicle’s appearance and your peace of mind.
           </p>
 
           {/* Learn More Button - Pulsating Effect (Centered) */}
-          <div className="mt-6 flex justify-center">
+          <div className="mt-12 flex justify-center">
             <PulsatingButton onClick={() => router.push("/aboutpage")}>
               Learn More
             </PulsatingButton>

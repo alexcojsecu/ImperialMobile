@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { PulsatingButton } from './magicui/pulsating-button';
 
 const headerVariants = {
   initial: { opacity: 0, y: 50 },
@@ -100,12 +101,9 @@ const Services = () => {
           ))}
         </div>
         <div className="flex justify-center mt-12">
-          <button 
-            className="text-2xl font-bold bg-blue-600 text-white px-10 py-6 rounded-lg shadow-lg hover:bg-blue-700 transition-all"
-            onClick={() => router.push('/contactpage')}
-          >
-            Get a Quote Now
-          </button>
+        <PulsatingButton onClick={() => router.push("/contactpage")}>
+              Get a Quote Now
+            </PulsatingButton>
         </div>
       </div>
     </section>

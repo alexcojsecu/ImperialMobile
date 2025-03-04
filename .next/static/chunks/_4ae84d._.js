@@ -281,7 +281,6 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-icons/fa/index.mjs [app-client] (ecmascript)");
 ;
@@ -290,59 +289,160 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-;
-// BunnyCDN base URL
-const BUNNY_CDN_BASE_URL = "https://ImperialMobileGallery.b-cdn.net";
-// Generate image URLs for BunnyCDN
-const generateImageArray = (prefix, count)=>{
-    return Array.from({
-        length: count
-    }, (_, i)=>`${BUNNY_CDN_BASE_URL}/${prefix}${i + 1}.jpg`);
-};
-// Generate image arrays for each category
-const suvImages = generateImageArray("Suv", 19);
-const sedanImages = generateImageArray("Sedan", 42);
-const interiorImages = generateImageArray("Interior", 16);
-// Combine all images into a single array
-const allImages = [
-    ...suvImages,
-    ...sedanImages,
-    ...interiorImages
+const CDN_BASE_URL = "https://ImperialMobileGallery.b-cdn.net";
+const imageNames = [
+    "Interior1.jpg",
+    "Interior2.jpg",
+    "Interior3.jpg",
+    "Interior4.jpg",
+    "Interior5.jpg",
+    "Interior6.jpg",
+    "Interior7.jpg",
+    "Interior8.jpg",
+    "Interior9.jpg",
+    "Interior10.jpg",
+    "Interior11.JPG",
+    "Interior12.jpg",
+    "Interior13.jpg",
+    "Interior14.jpg",
+    "Interior15.jpg",
+    "Interior16.jpg",
+    "Interior17.jpg",
+    "Sedan1.jpg",
+    "Sedan2.jpg",
+    "Sedan3.jpg",
+    "Sedan4.jpg",
+    "Sedan5.jpg",
+    "Sedan6.jpg",
+    "Sedan7.jpg",
+    "Sedan8.JPG",
+    "Sedan9.jpg",
+    "Sedan10.jpg",
+    "Sedan11.jpg",
+    "Sedan12.jpg",
+    "Sedan13.jpg",
+    "Sedan14.jpg",
+    "Sedan15.jpg",
+    "Sedan16.jpg",
+    "Sedan17.jpg",
+    "Sedan18.jpg",
+    "Sedan19.jpg",
+    "Sedan20.jpg",
+    "Sedan21.jpg",
+    "Sedan22.jpg",
+    "Sedan23.jpg",
+    "Sedan24.jpg",
+    "Sedan25.JPG",
+    "Sedan26.jpg",
+    "Sedan27.JPG",
+    "Sedan28.JPG",
+    "Sedan29.jpg",
+    "Sedan30.JPG",
+    "Sedan31.jpg",
+    "Sedan32.jpg",
+    "Sedan33.jpg",
+    "Sedan34.jpg",
+    "Sedan35.jpg",
+    "Sedan36.jpg",
+    "Sedan37.jpg",
+    "Sedan38.jpg",
+    "Sedan39.jpg",
+    "Sedan40.jpg",
+    "Sedan41.jpg",
+    "Sedan42.jpg",
+    "Suv1.jpg",
+    "Suv2.jpg",
+    "Suv3.jpg",
+    "Suv4.jpg",
+    "Suv5.jpg",
+    "Suv6.jpg",
+    "Suv7.jpg",
+    "Suv8.jpg",
+    "Suv9.jpg",
+    "Suv10.jpg",
+    "Suv11.jpg",
+    "Suv12.jpg",
+    "Suv13.jpg",
+    "Suv14.jpg",
+    "Suv15.jpg",
+    "Suv16.jpg",
+    "Suv17.jpg",
+    "Suv18.jpg",
+    "Suv19.jpg",
+    "Suv20.jpg",
+    "Suv21.jpg",
+    "Suv22.jpg",
+    "Suv23.jpg",
+    "Suv24.jpg",
+    "Suv25.jpg"
 ];
-const IMAGES_PER_PAGE = 15;
+const INITIAL_IMAGES_COUNT = 15;
 const Gallery = ({ selectedCategory = "All" })=>{
     _s();
-    const [filter, setFilter] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(selectedCategory);
-    const [currentPage, setCurrentPage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
-    const [dropdownOpen, setDropdownOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [selectedImage, setSelectedImage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null); // Track the selected image
-    const [currentImageIndex, setCurrentImageIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0); // Track the index of the selected image
-    const filteredImages = filter === "All" ? allImages : allImages.filter((img)=>img.toLowerCase().includes(filter.toLowerCase()));
-    const totalPages = Math.ceil(filteredImages.length / IMAGES_PER_PAGE);
-    const startIndex = (currentPage - 1) * IMAGES_PER_PAGE;
-    const paginatedImages = filteredImages.slice(startIndex, startIndex + IMAGES_PER_PAGE);
-    // Handle image click
+    const [visibleImages, setVisibleImages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(INITIAL_IMAGES_COUNT);
+    const [selectedImage, setSelectedImage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [currentImageIndex, setCurrentImageIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [sortOrder, setSortOrder] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("ASC");
+    const [filterCategory, setFilterCategory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("All");
+    const [showDropdown, setShowDropdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const allImages = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "Gallery.useMemo[allImages]": ()=>{
+            let filteredImages = imageNames;
+            if (filterCategory !== "All") {
+                filteredImages = imageNames.filter({
+                    "Gallery.useMemo[allImages]": (name)=>name.includes(filterCategory)
+                }["Gallery.useMemo[allImages]"]);
+            }
+            const sortedImages = [
+                ...filteredImages
+            ].sort();
+            if (sortOrder === "DESC") {
+                sortedImages.reverse();
+            }
+            return sortedImages.map({
+                "Gallery.useMemo[allImages]": (name)=>`${CDN_BASE_URL}/${name}`
+            }["Gallery.useMemo[allImages]"]);
+        }
+    }["Gallery.useMemo[allImages]"], [
+        filterCategory,
+        sortOrder
+    ]);
+    const displayedImages = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "Gallery.useMemo[displayedImages]": ()=>allImages.slice(0, visibleImages)
+    }["Gallery.useMemo[displayedImages]"], [
+        visibleImages,
+        allImages
+    ]);
+    const handleShowMore = ()=>{
+        setVisibleImages((prevCount)=>Math.min(prevCount + INITIAL_IMAGES_COUNT, allImages.length));
+    };
     const handleImageClick = (src, index)=>{
         setSelectedImage(src);
-        setCurrentImageIndex(startIndex + index); // Set the index of the selected image
+        setCurrentImageIndex(index);
     };
-    // Handle close overlay
     const handleCloseOverlay = ()=>{
         setSelectedImage(null);
     };
-    // Handle previous image
-    const handlePreviousImage = ()=>{
-        if (currentImageIndex > 0) {
-            setCurrentImageIndex(currentImageIndex - 1);
-            setSelectedImage(allImages[currentImageIndex - 1]);
-        }
+    const handleSortChange = (value)=>{
+        setSortOrder(value);
+        setShowDropdown(false);
     };
-    // Handle next image
+    const handleCategoryChange = (value)=>{
+        setFilterCategory(value);
+        setShowDropdown(false);
+    };
+    const toggleDropdown = ()=>{
+        setShowDropdown(!showDropdown);
+    };
     const handleNextImage = ()=>{
-        if (currentImageIndex < allImages.length - 1) {
-            setCurrentImageIndex(currentImageIndex + 1);
-            setSelectedImage(allImages[currentImageIndex + 1]);
-        }
+        const newIndex = (currentImageIndex + 1) % allImages.length;
+        setSelectedImage(allImages[newIndex]);
+        setCurrentImageIndex(newIndex);
+    };
+    const handlePrevImage = ()=>{
+        const newIndex = (currentImageIndex - 1 + allImages.length) % allImages.length;
+        setSelectedImage(allImages[newIndex]);
+        setCurrentImageIndex(newIndex);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
         initial: {
@@ -370,76 +470,91 @@ const Gallery = ({ selectedCategory = "All" })=>{
                         children: "Gallery"
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 81,
+                        lineNumber: 101,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setDropdownOpen(!dropdownOpen),
-                                className: "p-4 border rounded-md shadow-sm flex items-center space-x-2 bg-white text-2xl",
+                                onClick: toggleDropdown,
+                                className: "px-6 py-3 border rounded-md shadow-sm text-2xl flex items-center justify-between",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: filter
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Gallery.tsx",
-                                        lineNumber: 87,
-                                        columnNumber: 13
-                                    }, this),
+                                    filterCategory,
+                                    " ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronDown"], {
-                                        className: `transition-transform ${dropdownOpen ? "rotate-180" : ""}`
+                                        className: "ml-2"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Gallery.tsx",
-                                        lineNumber: 88,
-                                        columnNumber: 13
+                                        lineNumber: 104,
+                                        columnNumber: 30
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Gallery.tsx",
-                                lineNumber: 83,
+                                lineNumber: 103,
                                 columnNumber: 11
                             }, this),
-                            dropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                className: "absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg z-10",
+                            showDropdown && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute top-full left-0 right-0 bg-white shadow-md mt-2 rounded-md z-10",
                                 children: [
-                                    "All",
-                                    "Suv",
-                                    "Sedan",
-                                    "Interior"
-                                ].map((option)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                        className: "px-4 py-2 text-xl text-gray-800 hover:bg-gray-200 cursor-pointer",
-                                        onClick: ()=>{
-                                            setFilter(option);
-                                            setCurrentPage(1);
-                                            setDropdownOpen(false);
-                                        },
-                                        children: option
-                                    }, option, false, {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "text-xl cursor-pointer p-2 hover:bg-gray-200",
+                                        onClick: ()=>handleCategoryChange('All'),
+                                        children: "All Categories"
+                                    }, void 0, false, {
                                         fileName: "[project]/components/Gallery.tsx",
-                                        lineNumber: 93,
-                                        columnNumber: 17
-                                    }, this))
-                            }, void 0, false, {
+                                        lineNumber: 108,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "text-xl cursor-pointer p-2 hover:bg-gray-200",
+                                        onClick: ()=>handleCategoryChange('Suv'),
+                                        children: "SUV"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/Gallery.tsx",
+                                        lineNumber: 109,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "text-xl cursor-pointer p-2 hover:bg-gray-200",
+                                        onClick: ()=>handleCategoryChange('Sedan'),
+                                        children: "Sedan"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/Gallery.tsx",
+                                        lineNumber: 110,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "text-xl cursor-pointer p-2 hover:bg-gray-200",
+                                        onClick: ()=>handleCategoryChange('Interior'),
+                                        children: "Interior"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/Gallery.tsx",
+                                        lineNumber: 111,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/components/Gallery.tsx",
-                                lineNumber: 91,
+                                lineNumber: 107,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 82,
+                        lineNumber: 102,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 80,
+                lineNumber: 100,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-3 gap-4",
-                children: paginatedImages.map((src, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                children: displayedImages.map((src, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                         whileHover: {
                             scale: 1.05
                         },
@@ -452,168 +567,110 @@ const Gallery = ({ selectedCategory = "All" })=>{
                         },
                         className: "relative overflow-hidden rounded-2xl shadow-md cursor-pointer",
                         onClick: ()=>handleImageClick(src, index),
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                             src: src,
                             alt: `Gallery image ${index + 1}`,
-                            width: 500,
-                            height: 300,
-                            className: "w-full h-full object-cover transition-transform duration-300",
-                            quality: 75,
-                            loading: "lazy" // Lazy load non-critical images
-                            ,
-                            placeholder: "blur" // Add blurry placeholder
-                            ,
-                            blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgAB/1h8JAAAAABJRU5ErkJggg==" // Placeholder image
+                            loading: "lazy",
+                            className: "w-full h-full object-cover transition-transform duration-300"
                         }, void 0, false, {
                             fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 119,
+                            lineNumber: 126,
                             columnNumber: 13
                         }, this)
-                    }, index, false, {
+                    }, src, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 111,
+                        lineNumber: 118,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 109,
+                lineNumber: 116,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-center mt-6 space-x-4",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>setCurrentPage((prev)=>Math.max(prev - 1, 1)),
-                        disabled: currentPage === 1,
-                        className: "px-6 py-3 border rounded-md shadow-sm disabled:opacity-50 text-2xl",
-                        children: "Previous"
-                    }, void 0, false, {
-                        fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 134,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "px-6 py-3 text-2xl",
-                        children: [
-                            "Page ",
-                            currentPage,
-                            " of ",
-                            totalPages
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 141,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>setCurrentPage((prev)=>Math.min(prev + 1, totalPages)),
-                        disabled: currentPage === totalPages,
-                        className: "px-6 py-3 border rounded-md shadow-sm disabled:opacity-50 text-2xl",
-                        children: "Next"
-                    }, void 0, false, {
-                        fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 142,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+            visibleImages < allImages.length && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "text-center mt-6",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    onClick: handleShowMore,
+                    className: "px-6 py-3 border rounded-md shadow-sm text-2xl",
+                    children: "Show More"
+                }, void 0, false, {
+                    fileName: "[project]/components/Gallery.tsx",
+                    lineNumber: 137,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 133,
-                columnNumber: 7
+                lineNumber: 136,
+                columnNumber: 9
             }, this),
             selectedImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50",
-                onClick: handleCloseOverlay,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: (e)=>{
-                            e.stopPropagation(); // Prevent overlay close
-                            handlePreviousImage();
-                        },
-                        className: "absolute left-4 bg-white bg-opacity-75 p-4 rounded-full shadow-lg hover:bg-opacity-100 transition-opacity",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronLeft"], {
-                            className: "text-3xl text-gray-900"
-                        }, void 0, false, {
-                            fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 165,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 158,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative w-[80vw] h-[80vh] flex items-center justify-center",
-                        onClick: (e)=>e.stopPropagation(),
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            src: selectedImage,
-                            alt: "Enlarged gallery image",
-                            width: 1200,
-                            height: 800,
-                            className: "max-w-full max-h-full object-contain rounded-lg",
-                            quality: 75
-                        }, void 0, false, {
-                            fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 173,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 169,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: (e)=>{
-                            e.stopPropagation(); // Prevent overlay close
-                            handleNextImage();
-                        },
-                        className: "absolute right-4 bg-white bg-opacity-75 p-4 rounded-full shadow-lg hover:bg-opacity-100 transition-opacity",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronRight"], {
-                            className: "text-3xl text-gray-900"
-                        }, void 0, false, {
-                            fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 191,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 184,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: (e)=>{
-                            e.stopPropagation(); // Prevent overlay close
-                            handleCloseOverlay();
-                        },
-                        className: "absolute top-4 right-4 bg-white bg-opacity-75 p-4 rounded-full shadow-lg hover:bg-opacity-100 transition-opacity",
+                        onClick: handleCloseOverlay,
+                        className: "absolute top-4 right-4 bg-white p-4 rounded-full shadow-lg",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: "text-3xl text-gray-900",
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 202,
+                            lineNumber: 148,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 195,
+                        lineNumber: 147,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: handlePrevImage,
+                        className: "absolute left-4 text-white text-3xl",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronLeft"], {}, void 0, false, {
+                            fileName: "[project]/components/Gallery.tsx",
+                            lineNumber: 151,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/Gallery.tsx",
+                        lineNumber: 150,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: handleNextImage,
+                        className: "absolute right-4 text-white text-3xl",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronRight"], {}, void 0, false, {
+                            fileName: "[project]/components/Gallery.tsx",
+                            lineNumber: 154,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/Gallery.tsx",
+                        lineNumber: 153,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        src: selectedImage,
+                        alt: "Enlarged gallery image",
+                        className: "max-w-full max-h-full object-contain"
+                    }, void 0, false, {
+                        fileName: "[project]/components/Gallery.tsx",
+                        lineNumber: 156,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 153,
+                lineNumber: 146,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Gallery.tsx",
-        lineNumber: 73,
+        lineNumber: 93,
         columnNumber: 5
     }, this);
 };
-_s(Gallery, "GwJmimeBIg9KKPK7A0dDMF3grAk=");
+_s(Gallery, "5NGCH1j/91FspoHHgYeeJdbGwMI=");
 _c = Gallery;
 const __TURBOPACK__default__export__ = Gallery;
 var _c;
