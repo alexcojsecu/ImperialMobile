@@ -25,15 +25,10 @@ const imageNames = [
 
 const INITIAL_IMAGES_COUNT = 15;
 
-interface GalleryProps {
-  // Removed the unused selectedCategory prop
-}
-
-const Gallery: React.FC<GalleryProps> = () => {
+const Gallery: React.FC = () => {
   const [visibleImages, setVisibleImages] = useState<number>(INITIAL_IMAGES_COUNT);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const [sortOrder, setSortOrder] = useState<string>("ASC");
   const [filterCategory, setFilterCategory] = useState<string>("All");
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
 
@@ -42,12 +37,8 @@ const Gallery: React.FC<GalleryProps> = () => {
     if (filterCategory !== "All") {
       filteredImages = imageNames.filter(name => name.includes(filterCategory));
     }
-    const sortedImages = [...filteredImages].sort();
-    if (sortOrder === "DESC") {
-      sortedImages.reverse();
-    }
-    return sortedImages.map(name => `${CDN_BASE_URL}/${name}`);
-  }, [filterCategory, sortOrder]);
+    return filteredImages.map(name => `${CDN_BASE_URL}/${name}`);
+  }, [filterCategory]);
 
   const displayedImages = useMemo(() => allImages.slice(0, visibleImages), [visibleImages, allImages]);
 

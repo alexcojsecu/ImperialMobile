@@ -384,7 +384,6 @@ const Gallery = ()=>{
     const [visibleImages, setVisibleImages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(INITIAL_IMAGES_COUNT);
     const [selectedImage, setSelectedImage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [currentImageIndex, setCurrentImageIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [sortOrder, setSortOrder] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("ASC");
     const [filterCategory, setFilterCategory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("All");
     const [showDropdown, setShowDropdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const allImages = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
@@ -395,19 +394,12 @@ const Gallery = ()=>{
                     "Gallery.useMemo[allImages]": (name)=>name.includes(filterCategory)
                 }["Gallery.useMemo[allImages]"]);
             }
-            const sortedImages = [
-                ...filteredImages
-            ].sort();
-            if (sortOrder === "DESC") {
-                sortedImages.reverse();
-            }
-            return sortedImages.map({
+            return filteredImages.map({
                 "Gallery.useMemo[allImages]": (name)=>`${CDN_BASE_URL}/${name}`
             }["Gallery.useMemo[allImages]"]);
         }
     }["Gallery.useMemo[allImages]"], [
-        filterCategory,
-        sortOrder
+        filterCategory
     ]);
     const displayedImages = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
         "Gallery.useMemo[displayedImages]": ()=>allImages.slice(0, visibleImages)
@@ -468,7 +460,7 @@ const Gallery = ()=>{
                         children: "Gallery"
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 97,
+                        lineNumber: 88,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -484,13 +476,13 @@ const Gallery = ()=>{
                                         className: "ml-2"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Gallery.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 91,
                                         columnNumber: 30
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Gallery.tsx",
-                                lineNumber: 99,
+                                lineNumber: 90,
                                 columnNumber: 11
                             }, this),
                             showDropdown && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -502,7 +494,7 @@ const Gallery = ()=>{
                                         children: "All Categories"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Gallery.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 95,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -511,7 +503,7 @@ const Gallery = ()=>{
                                         children: "SUV"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Gallery.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 96,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -520,7 +512,7 @@ const Gallery = ()=>{
                                         children: "Sedan"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Gallery.tsx",
-                                        lineNumber: 106,
+                                        lineNumber: 97,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -529,25 +521,25 @@ const Gallery = ()=>{
                                         children: "Interior"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Gallery.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 98,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Gallery.tsx",
-                                lineNumber: 103,
+                                lineNumber: 94,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 98,
+                        lineNumber: 89,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 96,
+                lineNumber: 87,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -574,17 +566,17 @@ const Gallery = ()=>{
                             className: "w-full h-full object-cover transition-transform duration-300"
                         }, void 0, false, {
                             fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 122,
+                            lineNumber: 113,
                             columnNumber: 13
                         }, this)
                     }, src, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 114,
+                        lineNumber: 105,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 112,
+                lineNumber: 103,
                 columnNumber: 7
             }, this),
             visibleImages < allImages.length && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -595,12 +587,12 @@ const Gallery = ()=>{
                     children: "Show More"
                 }, void 0, false, {
                     fileName: "[project]/components/Gallery.tsx",
-                    lineNumber: 135,
+                    lineNumber: 126,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 134,
+                lineNumber: 125,
                 columnNumber: 9
             }, this),
             selectedImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -614,12 +606,12 @@ const Gallery = ()=>{
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 146,
+                            lineNumber: 137,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 145,
+                        lineNumber: 136,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -627,12 +619,12 @@ const Gallery = ()=>{
                         className: "absolute left-4 text-white text-3xl",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronLeft"], {}, void 0, false, {
                             fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 149,
+                            lineNumber: 140,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 148,
+                        lineNumber: 139,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -640,12 +632,12 @@ const Gallery = ()=>{
                         className: "absolute right-4 text-white text-3xl",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronRight"], {}, void 0, false, {
                             fileName: "[project]/components/Gallery.tsx",
-                            lineNumber: 152,
+                            lineNumber: 143,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 151,
+                        lineNumber: 142,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -656,23 +648,23 @@ const Gallery = ()=>{
                         className: "max-w-full max-h-full object-contain"
                     }, void 0, false, {
                         fileName: "[project]/components/Gallery.tsx",
-                        lineNumber: 154,
+                        lineNumber: 145,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Gallery.tsx",
-                lineNumber: 144,
+                lineNumber: 135,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Gallery.tsx",
-        lineNumber: 89,
+        lineNumber: 80,
         columnNumber: 5
     }, this);
 };
-_s(Gallery, "5NGCH1j/91FspoHHgYeeJdbGwMI=");
+_s(Gallery, "5x3ta9BSu0ftUXEvu2jTdfhI0c4=");
 _c = Gallery;
 const __TURBOPACK__default__export__ = Gallery;
 var _c;

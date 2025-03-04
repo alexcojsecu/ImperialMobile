@@ -2,8 +2,5 @@
   "/page": "app/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/servicespage/page": "app/servicespage/page.js",
-  "/gallerypage/page": "app/gallerypage/page.js",
-  "/aboutpage/page": "app/aboutpage/page.js",
-  "/contactpage/page": "app/contactpage/page.js"
+  "/gallerypage/page": "app/gallerypage/page.js"
 }
