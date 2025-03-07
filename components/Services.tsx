@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { PulsatingButton } from './magicui/pulsating-button';
 
-
 const CDN_BASE_URL = "https://ImperialMobileGallery.b-cdn.net";
 
 const headerVariants = {
@@ -19,17 +18,17 @@ const services = [
   {
     title: "Exterior Detailing",
     description: "Full exterior wash, wax, and polish to keep your car shining.",
-    image: "/Service1.jpg",
+    image: `${CDN_BASE_URL}/Service1.jpg`, // Use CDN_BASE_URL here
   },
   {
     title: "Interior Cleaning",
     description: "Deep clean of seats, carpets, and interior surfaces.",
-    image: "/Interior5.jpg",
+    image: `${CDN_BASE_URL}/Interior5.jpg`, // Use CDN_BASE_URL here
   },
   {
     title: "Full Detailing",
     description: "Complete detailing inside and out for a like-new finish.",
-    image: "/Service3.jpg",
+    image: `${CDN_BASE_URL}/Service3.jpg`, // Use CDN_BASE_URL here
   },
 ];
 
@@ -90,7 +89,7 @@ const Services = () => {
               </h3>
               <div className="relative h-[400px] w-full rounded-lg overflow-hidden group transition-transform duration-300">
                 <Image
-                  src={service.image}
+                  src={service.image} // Use the CDN-based image URL
                   alt={service.title}
                   layout="fill"
                   objectFit="cover"
@@ -104,9 +103,9 @@ const Services = () => {
           ))}
         </div>
         <div className="flex justify-center mt-12">
-        <PulsatingButton onClick={() => router.push("/contactpage")}>
-              Get a Quote Now
-            </PulsatingButton>
+          <PulsatingButton onClick={() => router.push("/contactpage")}>
+            Get a Quote Now
+          </PulsatingButton>
         </div>
       </div>
     </section>
