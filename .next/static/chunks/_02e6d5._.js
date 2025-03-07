@@ -39,42 +39,38 @@ const ContactDetailed = ()=>{
         cars: {},
         serviceType: ""
     });
-    // Remove this line
-    // const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSubmitting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    // Remove this line
-    // const [selectedCar, setSelectedCar] = useState("");
-    const [selectedCar] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [isSubmitting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false); // Remove this line
+    const [selectedCar] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(""); // Remove this line
     const [dropdownOpen, setDropdownOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [serviceDropdownOpen, setServiceDropdownOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     // Pricing structure based on car type
     const pricing = {
-        "Sedan": {
+        Sedan: {
             "Basic Detail": 35,
             "Extended Detail": 60,
             "Full Detail": 125
         },
-        "Coupe": {
+        Coupe: {
             "Basic Detail": 35,
             "Extended Detail": 60,
             "Full Detail": 125
         },
-        "Convertible": {
+        Convertible: {
             "Basic Detail": 35,
             "Extended Detail": 60,
             "Full Detail": 125
         },
-        "SUV": {
+        SUV: {
             "Basic Detail": 50,
             "Extended Detail": 80,
             "Full Detail": 150
         },
-        "Truck": {
+        Truck: {
             "Basic Detail": 50,
             "Extended Detail": 80,
             "Full Detail": 150
         },
-        "Van": {
+        Van: {
             "Basic Detail": 50,
             "Extended Detail": 80,
             "Full Detail": 150
@@ -120,7 +116,7 @@ const ContactDetailed = ()=>{
     };
     const { totalPrice, breakdown } = calculatePrice();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "flex justify-center items-center min-h-screen bg-[#D3D3D3] py-12 px-6",
+        className: "flex justify-center items-center min-h-screen bg-[#D3D3D3] py-12 px-6 pt-24 sm:pt-12",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "w-full max-w-6xl flex flex-col md:flex-row gap-10",
             children: [
@@ -132,7 +128,7 @@ const ContactDetailed = ()=>{
                             children: "Contact Us"
                         }, void 0, false, {
                             fileName: "[project]/components/ContactDetailed.tsx",
-                            lineNumber: 82,
+                            lineNumber: 72,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -145,7 +141,7 @@ const ContactDetailed = ()=>{
                                             children: "Name"
                                         }, void 0, false, {
                                             fileName: "[project]/components/ContactDetailed.tsx",
-                                            lineNumber: 89,
+                                            lineNumber: 79,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -156,13 +152,13 @@ const ContactDetailed = ()=>{
                                             className: "w-full bg-gray-100 border border-gray-300 rounded-lg text-lg py-3 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-800"
                                         }, void 0, false, {
                                             fileName: "[project]/components/ContactDetailed.tsx",
-                                            lineNumber: 90,
+                                            lineNumber: 80,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 88,
+                                    lineNumber: 78,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -172,7 +168,7 @@ const ContactDetailed = ()=>{
                                             children: "Subject"
                                         }, void 0, false, {
                                             fileName: "[project]/components/ContactDetailed.tsx",
-                                            lineNumber: 101,
+                                            lineNumber: 91,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -183,13 +179,13 @@ const ContactDetailed = ()=>{
                                             className: "w-full bg-gray-100 border border-gray-300 rounded-lg text-lg py-3 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-800"
                                         }, void 0, false, {
                                             fileName: "[project]/components/ContactDetailed.tsx",
-                                            lineNumber: 102,
+                                            lineNumber: 92,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 90,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -199,7 +195,7 @@ const ContactDetailed = ()=>{
                                             children: "Message"
                                         }, void 0, false, {
                                             fileName: "[project]/components/ContactDetailed.tsx",
-                                            lineNumber: 113,
+                                            lineNumber: 103,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -209,13 +205,13 @@ const ContactDetailed = ()=>{
                                             className: "w-full bg-gray-100 border border-gray-300 rounded-lg text-lg py-3 px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-800 resize-none h-32"
                                         }, void 0, false, {
                                             fileName: "[project]/components/ContactDetailed.tsx",
-                                            lineNumber: 114,
+                                            lineNumber: 104,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 102,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -224,19 +220,19 @@ const ContactDetailed = ()=>{
                                     children: isSubmitting ? "Sending..." : "Send Message"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 123,
+                                    lineNumber: 113,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ContactDetailed.tsx",
-                            lineNumber: 86,
+                            lineNumber: 76,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/ContactDetailed.tsx",
-                    lineNumber: 81,
+                    lineNumber: 71,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -247,7 +243,7 @@ const ContactDetailed = ()=>{
                             children: "Service & Pricing"
                         }, void 0, false, {
                             fileName: "[project]/components/ContactDetailed.tsx",
-                            lineNumber: 131,
+                            lineNumber: 124,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -258,7 +254,7 @@ const ContactDetailed = ()=>{
                                     children: "Choose a service type"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 135,
+                                    lineNumber: 128,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -270,13 +266,13 @@ const ContactDetailed = ()=>{
                                             className: `transition-transform ${serviceDropdownOpen ? "rotate-180" : ""}`
                                         }, void 0, false, {
                                             fileName: "[project]/components/ContactDetailed.tsx",
-                                            lineNumber: 141,
+                                            lineNumber: 134,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 136,
+                                    lineNumber: 129,
                                     columnNumber: 13
                                 }, this),
                                 serviceDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -287,18 +283,18 @@ const ContactDetailed = ()=>{
                                             children: service
                                         }, service, false, {
                                             fileName: "[project]/components/ContactDetailed.tsx",
-                                            lineNumber: 147,
+                                            lineNumber: 140,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 138,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ContactDetailed.tsx",
-                            lineNumber: 134,
+                            lineNumber: 127,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -309,7 +305,7 @@ const ContactDetailed = ()=>{
                                     children: "Choose a car type"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 161,
+                                    lineNumber: 154,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -321,13 +317,13 @@ const ContactDetailed = ()=>{
                                             className: `transition-transform ${dropdownOpen ? "rotate-180" : ""}`
                                         }, void 0, false, {
                                             fileName: "[project]/components/ContactDetailed.tsx",
-                                            lineNumber: 167,
+                                            lineNumber: 160,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 162,
+                                    lineNumber: 155,
                                     columnNumber: 13
                                 }, this),
                                 dropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -338,18 +334,18 @@ const ContactDetailed = ()=>{
                                             children: car
                                         }, car, false, {
                                             fileName: "[project]/components/ContactDetailed.tsx",
-                                            lineNumber: 173,
+                                            lineNumber: 166,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 171,
+                                    lineNumber: 164,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ContactDetailed.tsx",
-                            lineNumber: 160,
+                            lineNumber: 153,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -360,7 +356,7 @@ const ContactDetailed = ()=>{
                                     children: "Selected Cars & Prices"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 180,
                                     columnNumber: 13
                                 }, this),
                                 breakdown.length > 0 ? breakdown.map(({ carType, quantity, price })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -374,7 +370,7 @@ const ContactDetailed = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/ContactDetailed.tsx",
-                                                lineNumber: 191,
+                                                lineNumber: 184,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -385,26 +381,26 @@ const ContactDetailed = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/ContactDetailed.tsx",
-                                                lineNumber: 192,
+                                                lineNumber: 185,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, carType, true, {
                                         fileName: "[project]/components/ContactDetailed.tsx",
-                                        lineNumber: 190,
+                                        lineNumber: 183,
                                         columnNumber: 17
                                     }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-gray-500",
                                     children: "No cars selected."
                                 }, void 0, false, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 196,
+                                    lineNumber: 189,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ContactDetailed.tsx",
-                            lineNumber: 186,
+                            lineNumber: 179,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -415,7 +411,7 @@ const ContactDetailed = ()=>{
                                     children: "Total Price"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ContactDetailed.tsx",
-                                    lineNumber: 202,
+                                    lineNumber: 195,
                                     columnNumber: 13
                                 }, this),
                                 "$",
@@ -423,24 +419,24 @@ const ContactDetailed = ()=>{
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ContactDetailed.tsx",
-                            lineNumber: 201,
+                            lineNumber: 194,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/ContactDetailed.tsx",
-                    lineNumber: 130,
+                    lineNumber: 123,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/ContactDetailed.tsx",
-            lineNumber: 78,
+            lineNumber: 69,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/ContactDetailed.tsx",
-        lineNumber: 76,
+        lineNumber: 67,
         columnNumber: 5
     }, this);
 };

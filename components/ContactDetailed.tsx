@@ -16,25 +16,19 @@ const ContactDetailed = () => {
     serviceType: "",
   });
 
-  // Remove this line
-// const [isSubmitting, setIsSubmitting] = useState(false);
-const [isSubmitting] = useState(false); 
-
-// Remove this line
-// const [selectedCar, setSelectedCar] = useState("");
-const [selectedCar] = useState(""); 
-
+  const [isSubmitting] = useState(false); // Remove this line
+  const [selectedCar] = useState(""); // Remove this line
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false);
 
   // Pricing structure based on car type
   const pricing = {
-    "Sedan": { "Basic Detail": 35, "Extended Detail": 60, "Full Detail": 125 },
-    "Coupe": { "Basic Detail": 35, "Extended Detail": 60, "Full Detail": 125 },
-    "Convertible": { "Basic Detail": 35, "Extended Detail": 60, "Full Detail": 125 },
-    "SUV": { "Basic Detail": 50, "Extended Detail": 80, "Full Detail": 150 },
-    "Truck": { "Basic Detail": 50, "Extended Detail": 80, "Full Detail": 150 },
-    "Van": { "Basic Detail": 50, "Extended Detail": 80, "Full Detail": 150 },
+    Sedan: { "Basic Detail": 35, "Extended Detail": 60, "Full Detail": 125 },
+    Coupe: { "Basic Detail": 35, "Extended Detail": 60, "Full Detail": 125 },
+    Convertible: { "Basic Detail": 35, "Extended Detail": 60, "Full Detail": 125 },
+    SUV: { "Basic Detail": 50, "Extended Detail": 80, "Full Detail": 150 },
+    Truck: { "Basic Detail": 50, "Extended Detail": 80, "Full Detail": 150 },
+    Van: { "Basic Detail": 50, "Extended Detail": 80, "Full Detail": 150 },
   };
 
   // Calculate total price and generate itemized breakdown
@@ -42,17 +36,14 @@ const [selectedCar] = useState("");
     let totalPrice = 0;
     const breakdown: { carType: string; quantity: number; price: number }[] = [];
 
-
     Object.entries(formData.cars).forEach(([carType, quantity]) => {
-        if (formData.serviceType && pricing[carType as keyof typeof pricing]) {
-          const serviceKey = formData.serviceType as keyof (typeof pricing)[keyof typeof pricing];
-          const pricePerCar = pricing[carType as keyof typeof pricing][serviceKey] * quantity;
-          totalPrice += pricePerCar;
-          breakdown.push({ carType, quantity, price: pricePerCar });
-        }
-      });
-      
-      
+      if (formData.serviceType && pricing[carType as keyof typeof pricing]) {
+        const serviceKey = formData.serviceType as keyof (typeof pricing)[keyof typeof pricing];
+        const pricePerCar = pricing[carType as keyof typeof pricing][serviceKey] * quantity;
+        totalPrice += pricePerCar;
+        breakdown.push({ carType, quantity, price: pricePerCar });
+      }
+    });
 
     return { totalPrice, breakdown };
   };
@@ -73,10 +64,9 @@ const [selectedCar] = useState("");
   const { totalPrice, breakdown } = calculatePrice();
 
   return (
-    <section className="flex justify-center items-center min-h-screen bg-[#D3D3D3] py-12 px-6">
-
+    <section className="flex justify-center items-center min-h-screen bg-[#D3D3D3] py-12 px-6 pt-24 sm:pt-12">
+      {/* Added pt-24 for small screens and sm:pt-12 for larger screens */}
       <div className="w-full max-w-6xl flex flex-col md:flex-row gap-10">
-        
         {/* Left: Contact Form */}
         <div className="w-full md:w-3/5 bg-white shadow-xl rounded-lg p-10">
           <h2 className="text-4xl font-extrabold text-center text-gray-900 mb-8">
@@ -120,7 +110,10 @@ const [selectedCar] = useState("");
             </div>
 
             {/* Submit Button */}
-            <button type="submit" className="w-full py-3 text-lg font-semibold bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all">
+            <button
+              type="submit"
+              className="w-full py-3 text-lg font-semibold bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all"
+            >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </form>

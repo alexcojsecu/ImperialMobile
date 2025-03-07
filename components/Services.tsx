@@ -6,6 +6,9 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { PulsatingButton } from './magicui/pulsating-button';
 
+
+const CDN_BASE_URL = "https://ImperialMobileGallery.b-cdn.net";
+
 const headerVariants = {
   initial: { opacity: 0, y: 50 },
   animate: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },

@@ -38,19 +38,21 @@ const Hero = () => {
       <div className="relative h-full w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-center h-full">
           {/* Sparkles Text */}
-          <div className="absolute top-[30%] left-0 transform -translate-y-1/2">
+          <div className="absolute top-[30%] left-0 transform -translate-y-1/2 text-center md:text-left w-full md:w-auto">
             <SparklesText
               text="Imperial Mobile Detailing"
-              className="text-white text-7xl font-bold"
+              className="text-white text-6xl sm:text-7xl lg:text-8xl font-bold" // Larger text size for all screens
             />
           </div>
 
           {/* Number Ticker and Label - Positioned together */}
-          <div className="absolute top-[40%] left-0 transform -translate-y-1/2 text-white flex items-center space-x-2">
-            <div className="text-6xl font-bold">
-              <NumberTicker end={125} duration={6} className="inline-block" />+
+          <div className="absolute top-[45%] sm:top-[40%] left-0 transform -translate-y-1/2 text-white flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 text-center md:text-left w-full md:w-auto">
+            <div className="text-5xl sm:text-6xl lg:text-7xl font-bold"> {/* Larger text size for all screens */}
+              <NumberTicker end={100} duration={6} className="inline-block" />+
             </div>
-            <div className="text-2xl font-medium">Recurring Customers</div>
+            <div className="text-3xl sm:text-4xl lg:text-5xl font-medium"> {/* Larger text size for all screens */}
+              Recurring Customers
+            </div>
           </div>
         </div>
       </div>

@@ -19,9 +19,6 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-
-  
-
   return (
     <nav className="absolute top-0 left-0 right-0 z-30">
       <div className="max-container padding-container">
@@ -33,7 +30,7 @@ const Navbar = () => {
               alt="Logo"
               width={400} // Initial width (will be overridden by CSS)
               height={100} // Initial height (will be overridden by CSS)
-              className="object-contain w-[clamp(150px,25vw,400px)] transition-all duration-300"
+              className="object-contain w-[clamp(200px,25vw,400px)] transition-all duration-300" // Adjusted minimum size to 200px
             />
           </Link>
 
@@ -55,14 +52,16 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Icon */}
-          <Image
-            src="/menu.svg"
-            alt="menu"
-            width={32}
-            height={32}
-            className="inline-block cursor-pointer lg:hidden"
-            onClick={toggleMenu}
-          />
+          <div className="pr-4 lg:hidden"> {/* Added padding to the right */}
+            <Image
+              src="/menu.svg"
+              alt="menu"
+              width={32}
+              height={32}
+              className="inline-block cursor-pointer"
+              onClick={toggleMenu}
+            />
+          </div>
         </div>
 
         {/* Mobile Dropdown Menu */}

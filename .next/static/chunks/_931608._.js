@@ -892,10 +892,10 @@ const Hero = ()=>{
                     className: "flex flex-col justify-center h-full",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute top-[30%] left-0 transform -translate-y-1/2",
+                            className: "absolute top-[30%] left-0 transform -translate-y-1/2 text-center md:text-left w-full md:w-auto",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$magicui$2f$sparkles$2d$text$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SparklesText"], {
                                 text: "Imperial Mobile Detailing",
-                                className: "text-white text-7xl font-bold"
+                                className: "text-white text-6xl sm:text-7xl lg:text-8xl font-bold" // Larger text size for all screens
                             }, void 0, false, {
                                 fileName: "[project]/components/Hero.tsx",
                                 lineNumber: 42,
@@ -907,13 +907,14 @@ const Hero = ()=>{
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute top-[40%] left-0 transform -translate-y-1/2 text-white flex items-center space-x-2",
+                            className: "absolute top-[45%] sm:top-[40%] left-0 transform -translate-y-1/2 text-white flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 text-center md:text-left w-full md:w-auto",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-6xl font-bold",
+                                    className: "text-5xl sm:text-6xl lg:text-7xl font-bold",
                                     children: [
+                                        " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$NumberTicker$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                            end: 125,
+                                            end: 100,
                                             duration: 6,
                                             className: "inline-block"
                                         }, void 0, false, {
@@ -929,9 +930,12 @@ const Hero = ()=>{
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-2xl font-medium",
-                                    children: "Recurring Customers"
-                                }, void 0, false, {
+                                    className: "text-3xl sm:text-4xl lg:text-5xl font-medium",
+                                    children: [
+                                        " ",
+                                        "Recurring Customers"
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/components/Hero.tsx",
                                     lineNumber: 53,
                                     columnNumber: 13
@@ -992,6 +996,7 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
+const CDN_BASE_URL = "https://ImperialMobileGallery.b-cdn.net";
 const headerVariants = {
     initial: {
         opacity: 0,
@@ -1086,18 +1091,18 @@ const Services = ()=>{
                                 className: "absolute bottom-[-14px] left-1/3 w-1/3 h-[3px] bg-gray-900 origin-left"
                             }, void 0, false, {
                                 fileName: "[project]/components/Services.tsx",
-                                lineNumber: 74,
+                                lineNumber: 77,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Services.tsx",
-                        lineNumber: 65,
+                        lineNumber: 68,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Services.tsx",
-                    lineNumber: 64,
+                    lineNumber: 67,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1110,7 +1115,7 @@ const Services = ()=>{
                                     children: service.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/Services.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 88,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1124,7 +1129,7 @@ const Services = ()=>{
                                             className: "transition-transform duration-300 group-hover:blur-md"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Services.tsx",
-                                            lineNumber: 89,
+                                            lineNumber: 92,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1134,29 +1139,29 @@ const Services = ()=>{
                                                 children: service.description
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Services.tsx",
-                                                lineNumber: 97,
+                                                lineNumber: 100,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/Services.tsx",
-                                            lineNumber: 96,
+                                            lineNumber: 99,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Services.tsx",
-                                    lineNumber: 88,
+                                    lineNumber: 91,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, index, true, {
                             fileName: "[project]/components/Services.tsx",
-                            lineNumber: 84,
+                            lineNumber: 87,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/Services.tsx",
-                    lineNumber: 82,
+                    lineNumber: 85,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1166,23 +1171,23 @@ const Services = ()=>{
                         children: "Get a Quote Now"
                     }, void 0, false, {
                         fileName: "[project]/components/Services.tsx",
-                        lineNumber: 104,
+                        lineNumber: 107,
                         columnNumber: 9
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Services.tsx",
-                    lineNumber: 103,
+                    lineNumber: 106,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/Services.tsx",
-            lineNumber: 63,
+            lineNumber: 66,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/Services.tsx",
-        lineNumber: 57,
+        lineNumber: 60,
         columnNumber: 5
     }, this);
 };
