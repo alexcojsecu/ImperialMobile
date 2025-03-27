@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 
 const Hero3 = () => {
   return (
@@ -14,7 +13,7 @@ const Hero3 = () => {
         loop
         muted
         playsInline
-        preload="metadata" // Optimize video loading
+        preload="metadata"
       />
 
       {/* Darker Overlay */}
@@ -25,7 +24,48 @@ const Hero3 = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
-        <TextHoverEffect text="SERVICES" />
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 300 100"
+          xmlns="http://www.w3.org/2000/svg"
+          className="select-none"
+        >
+          <defs>
+            <linearGradient
+              id="textGradient"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0%" stopColor="white" /> 
+              <stop offset="25%" stopColor="white" />
+              <stop offset="50%" stopColor="white" /> 
+              <stop offset="75%" stopColor="white" /> 
+              <stop offset="100%" stopColor="white" /> 
+            </linearGradient>
+          </defs>
+          <text
+            x="50%"
+            y="50%"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            strokeWidth="1"
+            stroke="#3b82f6" // Using blue as the base stroke color
+            className="font-[helvetica] font-bold fill-transparent text-5xl"
+          >
+            SERVICES
+          </text>
+          <text
+            x="50%"
+            y="50%"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            stroke="url(#textGradient)"
+            strokeWidth="1"
+            className="font-[helvetica] font-bold fill-transparent text-5xl"
+          >
+            SERVICES
+          </text>
+        </svg>
       </div>
     </section>
   );

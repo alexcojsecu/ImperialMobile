@@ -460,10 +460,6 @@ body {
   top: 30%;
 }
 
-.top-\[40\%\] {
-  top: 40%;
-}
-
 .top-\[45\%\] {
   top: 45%;
 }
@@ -634,16 +630,12 @@ body {
   width: calc(100% + 20px);
 }
 
-.w-\[clamp\(150px\,25vw\,400px\)\] {
-  width: clamp(150px, 25vw, 400px);
+.w-\[clamp\(200px\,25vw\,400px\)\] {
+  width: clamp(200px, 25vw, 400px);
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-\[clamp\(200px\,25vw\,400px\)\] {
-  width: clamp(200px, 25vw, 400px);
 }
 
 .max-w-2xl {
@@ -750,16 +742,8 @@ body {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
-}
-
-.items-start {
-  align-items: flex-start;
 }
 
 .items-center {
@@ -804,6 +788,12 @@ body {
   margin-bottom: calc(.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -814,12 +804,6 @@ body {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -1089,6 +1073,10 @@ body {
   padding-left: 1.5rem;
 }
 
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .pt-12 {
   padding-top: 3rem;
 }
@@ -1115,10 +1103,6 @@ body {
 
 .pt-\[30rem\] {
   padding-top: 30rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
 }
 
 .text-left {
@@ -1159,11 +1143,6 @@ body {
 
 .text-6xl {
   font-size: 3.75rem;
-  line-height: 1;
-}
-
-.text-7xl {
-  font-size: 4.5rem;
   line-height: 1;
 }
 
@@ -1555,65 +1534,12 @@ img {
 }
 
 @media (width >= 640px) {
-  .sm\:left-1\/2 {
-    left: 50%;
-  }
-
-  .sm\:top-\[45\%\] {
-    top: 45%;
-  }
-
   .sm\:top-\[40\%\] {
     top: 40%;
   }
 
-  .sm\:-translate-x-1\/2 {
-    --tw-translate-x: -50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .sm\:transform {
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .sm\:flex-row {
-    flex-direction: row;
-  }
-
-  .sm\:flex-col {
-    flex-direction: column;
-  }
-
-  .sm\:items-center {
-    align-items: center;
-  }
-
-  .sm\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0px * var(--tw-space-x-reverse));
-    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .sm\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(.5rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
-  .sm\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
   .sm\:px-6 {
@@ -1630,28 +1556,9 @@ img {
     padding-top: 3rem;
   }
 
-  .sm\:text-center {
-    text-align: center;
-  }
-
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
-  }
-
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 
   .sm\:text-6xl {
@@ -1666,10 +1573,6 @@ img {
 }
 
 @media (width >= 768px) {
-  .md\:left-0 {
-    left: 0;
-  }
-
   .md\:mb-0 {
     margin-bottom: 0;
   }
@@ -1694,10 +1597,6 @@ img {
     width: auto;
   }
 
-  .md\:transform-none {
-    transform: none;
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1706,10 +1605,10 @@ img {
     flex-direction: row;
   }
 
-  .md\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
-    margin-right: calc(.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(.5rem * calc(1 - var(--tw-space-x-reverse)));
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -1718,34 +1617,12 @@ img {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .md\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1rem * var(--tw-space-x-reverse));
-    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .md\:text-left {
     text-align: left;
   }
 
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .md\:text-6xl {
     font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .md\:text-7xl {
-    font-size: 4.5rem;
     line-height: 1;
   }
 }
@@ -1769,13 +1646,13 @@ img {
     padding-right: 2rem;
   }
 
-  .lg\:text-7xl {
-    font-size: 4.5rem;
+  .lg\:text-5xl {
+    font-size: 3rem;
     line-height: 1;
   }
 
-  .lg\:text-5xl {
-    font-size: 3rem;
+  .lg\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 
